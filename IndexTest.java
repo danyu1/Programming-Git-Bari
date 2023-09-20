@@ -15,7 +15,7 @@ import java.nio.file.Paths;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class IndexTest {
+public class IndexTest { // tests largely reused from GitTest
 
     static Index index = new Index();
 

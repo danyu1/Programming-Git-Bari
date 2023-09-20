@@ -16,7 +16,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class BlobTest {
+public class BlobTest { // tests largely reused from GitTest
 
     String[] fileNames = { "testFile1.txt", "testFile2.txt" };
     String[] fileContents = { "testFile1", "test dsanfodnfdsn" };

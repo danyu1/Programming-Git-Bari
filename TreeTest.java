@@ -16,7 +16,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class TreeTest {
+public class TreeTest { // tests largely reused from GitTest
 
     static String[] expectedContents = { "some content in file 1", "some content in file 2", "some content in file 3" };
     static String[] expectedSha = { "2e27b4d29c63a1242ee02973f5862cf26cf9679f",
