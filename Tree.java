@@ -86,7 +86,7 @@ public class Tree {
             numberOfCommits = calculateNumberOfCommits();
             String SHA1 = generateSHA1();
             Path objectFilePath = Paths
-                    .get("C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\objects", SHA1);
+                    .get(".\\objects", SHA1);
             byte[] originalString = returnStringOfCommits().getBytes();
             Files.write(objectFilePath, originalString);
         } else {

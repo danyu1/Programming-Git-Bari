@@ -48,9 +48,9 @@ public class Blob {
         String blobFileName = getSha1(fileContents());
 
         PrintWriter pw = new PrintWriter(
-                "C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\objects\\" + blobFileName); // found
-                                                                                                                      // out
-                                                                                                                      // online
+                ".\\objects\\" + blobFileName); // found
+                                                // out
+                                                // online
         // from Java Oracle
         // and Danny
 
