@@ -28,9 +28,9 @@ public class GitTest {
     static String[] expectedSha = { "2e27b4d29c63a1242ee02973f5862cf26cf9679f",
             "d98d670ea7ca145dee0266961b8bf8ee5b12925a", "0a9d1240f29014f6677816388f4763e7fdc41445" };
 
-    static String pathToObjectsFolder = "C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\objects";
+    static String pathToObjectsFolder = ".\\objects";
 
-    static String pathToIndexFolder = "C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\index.txt";
+    static String pathToIndexFolder = ".\\index.txt";
 
     @BeforeAll
     static void setUpBeforeClass() throws Exception {
@@ -44,11 +44,11 @@ public class GitTest {
 
             // create three test files in the workspace with content
             PrintWriter pw1 = new PrintWriter(
-                    "C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\testFile1.txt");
+                    ".\\testFile1.txt");
             PrintWriter pw2 = new PrintWriter(
-                    "C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\testFile2.txt");
+                    ".\\testFile2.txt");
             PrintWriter pw3 = new PrintWriter(
-                    "C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\testFile3.txt");
+                    ".\\testFile3.txt");
 
             pw1.print("some content in file 1");
             pw2.print("some content in file 2");
@@ -67,16 +67,16 @@ public class GitTest {
     @AfterAll
     static void tearDownAfterClass() throws Exception {
         Path tree1 = Paths.get(
-                "C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\objects\\10f228098914b028963a208273e41be47b4f417d");
+                ".\\objects\\10f228098914b028963a208273e41be47b4f417d");
         Path tree2 = Paths.get(
-                "C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\objects\\6016cd7c79df2958d3bc74b3dee21c7fe994e592");
+                ".\\objects\\6016cd7c79df2958d3bc74b3dee21c7fe994e592");
 
         Path textPath1 = Paths
-                .get("C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\testFile1.txt");
+                .get(".\\testFile1.txt");
         Path textPath2 = Paths
-                .get("C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\testFile2.txt");
+                .get(".\\testFile2.txt");
         Path textPath3 = Paths
-                .get("C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\testFile3.txt");
+                .get(".\\testFile3.txt");
         Path objectsPath = Paths.get(pathToObjectsFolder);
         if (Files.exists(textPath1)) {
             Files.delete(textPath1);
@@ -177,9 +177,9 @@ public class GitTest {
         Path path1 = Paths.get(pathToObjectsFolder, expectedSha[1]);
         Path path2 = Paths.get(pathToObjectsFolder, expectedSha[2]);
         Path pathToActualFile2 = Paths
-                .get("C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\testFile2.txt");
+                .get(".\\testFile2.txt");
         Path pathToActualFile3 = Paths
-                .get("C:\\Users\\danie\\OneDrive\\Desktop\\Topics Repos\\Programming-Git-Bari\\testFile3.txt");
+                .get(".\\testFile3.txt");
         Path indexPath = Paths.get(pathToIndexFolder);
 
         // test if the file still exists in objects folder
