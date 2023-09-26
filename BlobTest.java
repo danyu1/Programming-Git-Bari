@@ -46,7 +46,7 @@ public class BlobTest { // tests largely reused from GitTest
 
     @Test
     void testFileContents() throws Exception {
-        Blob blob = new Blob("testFile1.txt");
+        Blob blob = new Blob("./testFile1.txt");
 
         assertEquals("some content in file 1", blob.fileContents());
 
